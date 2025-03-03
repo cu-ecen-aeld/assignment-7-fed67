@@ -1,0 +1,13 @@
+diff --git a/scull/pipe.c b/scull/pipe.c
+index 04fb43d..7452de2 100644
+--- a/scull/pipe.c
++++ b/scull/pipe.c
+@@ -311,7 +311,7 @@ static struct file_operations scullpipe_proc_ops = {
+  */
+ struct file_operations scull_pipe_fops = {
+ 	.owner =	THIS_MODULE,
+-	.llseek =	no_llseek,
++	.llseek =	noop_llseek,
+ 	.read =		scull_p_read,
+ 	.write =	scull_p_write,
+ 	.poll =		scull_p_poll,
